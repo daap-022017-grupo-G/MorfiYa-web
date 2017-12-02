@@ -1,0 +1,1 @@
+angular.module ("MorfiYaApp", ["pascalprecht.translate","tmh.dinamicLocale"]);
