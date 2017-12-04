@@ -1,27 +1,23 @@
 <! DOCTYPE html>
-
-<html ng-app = "MorfiYaApp">
-
+<html data-ng-app = "morfiYaApp">
   <head>
-  
-    <meta charset = "UTF-8">
-    <title>Morfi Ya (Under Costruction)</title>
-  
+    <meta charset="UTF-8">
+    <title>Morfi Ya (Still Incomplete)</title>
   </head>
-  
-  <body ng-controller = "IndexController" >
-  
+  <body data-ng-controller="IndexController">
     <div class="page-header">
       <img src="images/logo.png" alt="Logo Morfi" class="img-responsive">
     </div>
-  
-  
-    <script type="text/javascript" src= "vendor/angular.min.js"></script>
-    <script type="text/javascript" src= "vendor/angular-translate.min.js"></script>
-    <script type="text/javascript" src= "vendor/tmhDinamicLocale.min.js"></script>
-    <script type="text/javascript" src= "scripts/app.js"></script>
-    <script type="text/javascript" src= "scripts/controllers/IndexController.js"></script>
-  
+    <!-- usando un filtro -->
+    <h1>{{ 'index.title' | translate }}</h1>
+    <!-- usando una directiva -->
+    <h2 translate>index.subtitle</h2>
+    <!-- usando un servicio desde en controlador -->
+    <h3>{{ translations.legend }}</h3>
+    <script type="text/javascript" src="vendor/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-translate.min.js"></script>
+    <script type="text/javascript" src="vendor/tmhDinamicLocale.min.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/controllers/IndexController.js"></script>
   </body>
-
 </html>
